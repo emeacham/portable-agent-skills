@@ -16,6 +16,7 @@ The result is a directory you can drop into `.claude/skills/`, `.agents/skills/`
 | Skill | What it does | Needs |
 |---|---|---|
 | [`google-analytics-admin`](skills/google-analytics-admin/) | Administer GA4 and Google Tag Manager through the **user's own signed-in browser session**: inventory accounts/properties/containers, move GA4 properties between accounts, consolidate many accounts into one, handle GTM's lack of a move feature (export/import + site tag updates), clean up empty accounts. No credentials, no API keys. | a browser the user can sign into |
+| [`ga4-event-tracking`](skills/ga4-event-tracking/) | Instrument a web app with GA4 custom events **and prove the data arrives**: design the event schema, add a safe `gtag` wrapper, instrument SPA routes, register custom dimensions/metrics *before* traffic starts, resolve who owns the measurement ID when page code and Tag Manager both configure it, verify at the network layer, filter your own traffic out. Also diagnoses "my events aren't showing up". | file edit + a browser the user can sign into |
 
 ## Using a skill
 
