@@ -46,4 +46,4 @@ Definitions are **archived**, not deleted. Archiving frees the slot and removes 
 
 - **Do not batch clicks without waiting.** The Save button needs a moment after a dropdown selection; a click sent immediately after choosing a unit can be dropped, and the entry silently never saves. Re-read the list after each save rather than trusting the click.
 - **A narrow browser pane clips the dialog** and puts Save off-screen. Collapse the admin sidebar or scroll horizontally. See [references/ga4-ui-notes.md](../references/ga4-ui-notes.md).
-- Dimensions take **24–48 hours** to appear in standard reports. Realtime and DebugView show the raw parameters immediately, so same-day verification does not wait on this.
+- Dimensions are documented as taking **24–48 hours** to appear in standard reports, and that is the figure to quote — but they frequently show up much sooner, sometimes within hours. Check an exploration's dimension picker before telling the user to wait a day. Realtime and DebugView show the raw parameters immediately either way, so same-day verification never depends on this.

@@ -43,4 +43,4 @@ Read-only, except that events sent during verification are real data in the prop
 - **Stale Tag Manager container.** `gtm.js` caches for roughly 15 minutes, partitioned per site, so a just-published container change may not be live in your tab. Force a refetch and reload before concluding failure — technique in [references/verification-techniques.md](../references/verification-techniques.md).
 - **A `beforeunload`-fired event** cannot be observed by reloading, because the page is gone. Dispatch the event manually on `window` to exercise the listener without leaving.
 - **Development framework modes double-fire mount effects.** Verify final counts against a production build.
-- **Custom dimensions are not expected to work yet.** They need 24–48 h. Their absence from reports is not a failure of this operation.
+- **Custom dimensions may not work yet.** The documented wait is 24–48 h, though they often appear sooner. Either way their absence from reports is not a failure of this operation — this operation is about delivery, not reportability.

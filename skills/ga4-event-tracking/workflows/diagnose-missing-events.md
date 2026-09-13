@@ -31,7 +31,7 @@ Each is silent. None produces a console error.
 Establish the symptom precisely
    ├── no /g/collect requests at all ──────► causes 1–3
    ├── requests exist, Realtime empty ─────► cause 4
-   └── events in Realtime, reports empty ──► cause 5 (or the 24–48 h lag)
+   └── events in Realtime, reports empty ──► cause 5 (or the reporting lag)
 07 verify-events-land      ← run first; it separates the three symptoms above
    │
    ├─ dataLayer has events, no network request

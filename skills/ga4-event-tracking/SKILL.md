@@ -34,7 +34,7 @@ For moving properties between accounts, consolidating accounts, or GTM export/im
 - **A `gtag.js` loaded *by* Tag Manager swallows page-level `gtag('event', …)` calls.** The events reach `dataLayer` perfectly formed and no network request is ever made. Exactly one owner may configure a given measurement ID. See [references/gtag-vs-gtm-ownership.md](references/gtag-vs-gtm-ownership.md).
 - **Registration limits are per property:** 50 event-scoped custom dimensions, 50 custom metrics, 25 user-scoped. Scope and event-parameter are **locked after save**; name and description stay editable. Budget slots before registering.
 - **Verification means the network, not the code.** `dataLayer` containing your event is not evidence it was sent. Look for a `/g/collect` request carrying the event name.
-- **Reports lag; Realtime and DebugView do not.** Newly registered dimensions take 24–48 h to appear in standard reports, so same-day verification happens in Realtime/DebugView or at the network layer.
+- **Reports lag; Realtime and DebugView do not.** Google documents 24–48 h before newly registered dimensions appear in standard reports, and that is the number to promise — but they often arrive far sooner (observed within ~10 h). Look before assuming you have to wait; just do not read an early absence as a fault.
 
 ## Operations (run individually)
 

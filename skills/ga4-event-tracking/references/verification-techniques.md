@@ -46,7 +46,7 @@ Reloading destroys the page before you can read the result. Dispatch the event m
 
 - **Realtime** — event counts for the last 30 minutes, no setup. The everyday check. Its window rolls, so a baseline taken 30 minutes ago is not comparable.
 - **DebugView** — full parameter detail for a client in debug mode. Use when you need to see parameter *values*, not just names.
-- **Standard reports** — lag, and newly registered custom dimensions take **24–48 hours** to appear. Their absence on the day is not evidence of a fault.
+- **Standard reports** — lag, and newly registered custom dimensions are documented as taking **24–48 hours** to appear. In practice they are often much quicker — within a single evening — so it costs nothing to look early. Treat the window as the promise you make, not the earliest you check: absence before 24 h is not evidence of a fault, but presence before 24 h is perfectly normal.
 
 ## Local versus deployed
 
