@@ -13,6 +13,12 @@ When this happens, do not conclude the user lost permission or that the property
 
 Worth telling the user if they have bookmarked GA4 URLs, since the same error will hit them.
 
+## Deep links can also silently land on the wrong screen
+
+The quieter failure: navigating to an admin deep link **immediately after switching property** completes without an error and leaves you on the *previous* screen. Nothing indicates anything went wrong, so a check that reads the page will describe the wrong page.
+
+Issue the same navigation a second time — it lands correctly once the property context has settled. Always confirm you are where you think you are (read the page heading, or `location.hash`) before acting on what you see.
+
 ## The property picker is the reliable navigation
 
 Searching the picker by property name is more robust than constructing URLs. The picker also shows the owning account and the property id next to each result, which is the quickest way to confirm you are about to act on the right one.
@@ -26,6 +32,12 @@ GA4's admin dialogs are wide. In a narrow browser pane the **Save** button sits 
 - Prefer element references over pixel coordinates; the layout shifts when the pane resizes, and stale coordinates click the wrong thing.
 
 After any pane resize, re-read positions before clicking. A batch of coordinate clicks written against an old screenshot will land somewhere unintended.
+
+## The dimension and metric dialogs are laid out differently
+
+They look alike and are not. The custom **metric** dialog has no Description row in the same place, carries an extra *Unit of measurement* field beside the event parameter, and sits its fields higher than the **dimension** dialog's.
+
+Coordinates do not transfer between the two. Re-read the dialog after opening it rather than reusing positions from the other one — reused coordinates type into empty space, and the form looks untouched afterwards.
 
 ## Locked versus editable fields
 

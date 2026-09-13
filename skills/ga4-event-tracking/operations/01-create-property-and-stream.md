@@ -25,7 +25,7 @@
 3. Business details: pick the closest industry category and size. These only affect benchmarking suggestions; do not over-think them.
 4. Business objectives: choose the one or two that match (for a content or game site, "Understand web and/or app traffic" and "View user engagement & retention"). Changeable later.
 5. Click **Create**. Accept the terms only if the user asked for a property — their instruction is the authorization.
-6. On the data-collection step choose **Web**. Enter `SITE_URL` and a stream name. Leave **Enhanced measurement** on unless the user objects; it supplies `page_view`, `scroll`, and outbound `click` without code.
+6. On the data-collection step choose **Web**. Enter `SITE_URL` as a **bare host with no port** — `example.com`, not `localhost:5173`; the field rejects a port with *"Valid website URL is required"*. It is metadata only: GA never verifies it and accepts events from whatever origin actually sends them, so a development-only app can use its eventual production host. Add a stream name. Leave **Enhanced measurement** on unless the user objects; it supplies `page_view`, `scroll`, and outbound `click` without code.
 7. Read the **Measurement ID** from the resulting panel — then confirm it on **Admin → Data streams → the stream**, where it is displayed as a labelled field rather than embedded in a code snippet.
 
 ## Verification
@@ -40,6 +40,7 @@ Admin → Property details → **Move to trash**. Trashed properties purge after
 
 ## Failure modes / Notes
 
+- **"Valid website URL is required"** means the URL carries a port, a path, or a scheme the field will not take. Strip it back to the bare host.
 - **"No data received in past 48 hours"** on the stream page is expected until `07` succeeds, and lingers briefly afterwards. It is not a verification signal.
 - **Enhanced measurement counts outbound link clicks automatically.** Worth telling the user if the site links anywhere sensitive — turning it off is a data-stream setting, not a code change.
 - A new property starts empty. If the user believed they had history at the old ID, say explicitly that it is not recoverable.
