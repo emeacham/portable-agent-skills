@@ -48,7 +48,7 @@ For moving properties between accounts, consolidating accounts, or GTM export/im
 | 05 | [register-custom-definitions](operations/05-register-custom-definitions.md) | After `03`, **before** the events ship. |
 | 06 | [instrument-pages](operations/06-instrument-pages.md) | Add events to components, including SPA route changes. |
 | 07 | [verify-events-land](operations/07-verify-events-land.md) | After any change to events, tags, or IDs. |
-| 08 | [filter-internal-traffic](operations/08-filter-internal-traffic.md) | Stop the user's own visits polluting the data. |
+| 08 | [filter-internal-traffic](operations/08-filter-internal-traffic.md) | Stop the user's own visits polluting the data, without the filter lapsing on an IP change. |
 | 09 | [maintain-custom-definitions](operations/09-maintain-custom-definitions.md) | Rename or re-describe a dimension as its meaning widens. |
 
 ## Workflows (operations in the necessary order)
